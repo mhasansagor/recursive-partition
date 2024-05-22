@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.contentBox{
+    width: 60%;
+    height: 60%;
+    text-align: center;
+}
+#container {
+    width: 100%;
+    height: 100%;
+    /* width: 80%;
+    height: 80%; */
+    display: flex;
+    position: relative;
+    background-color: #eee;
+}
+
+.partition {
+    border: 1px solid #000;
+    position: relative;
+    display: flex;
+}
+
+.controls {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.partition > .partition {
+    flex: 1;
+}
+
+.split-vertical {
+    flex-direction: row;
+}
+
+.split-horizontal {
+    flex-direction: column;
+}
+
+.partition-resize-handle {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.partition-resize-handle.vertical {
+    cursor: ew-resize;
+    width: 5px;
+    top: 0;
+    bottom: 0;
+    right: -2.5px;
+}
+
+.partition-resize-handle.horizontal {
+    cursor: ns-resize;
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: -2.5px;
+}
